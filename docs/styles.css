@@ -32,3 +32,17 @@ circle {
 .group > text {
   text-anchor: start;
 }
+
+#saves {
+  min-width: 173px;
+}
+
+.label {
+  display: inline-block;
+  min-width: 80px;
+}
+
+.fieldset {
+  margin-left: 60px;
+  width: 715px;
+}

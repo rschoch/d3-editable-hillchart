@@ -1,14 +1,54 @@
 <!doctype html>
 <html>
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>d3 hill chart</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <svg />
-    <script src="bundle.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>d3 hill chart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+  <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <svg style="background-color: white" />
+  <fieldset class="fieldset">
+    <legend>Menu</legend>
+    <div class="addDot">
+      <label class="label" for="itemName">Add dot:</label>
+      <input type="text" id="itemName" name="itemName" />
+      <select id="colorPicker">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="pink">Pink</option>
+        <option value="black">Black</option>
+        <option value="grey">Grey</option>
+      </select>
+      <button id="addItem">Add</button>
+    </div>
+    <br>
+    <div class="saveChart">
+      <label class="label" for="saveName">Save chart:</label>
+      <input type="text" id="saveName" name="saveName" required/>
+      <button id="save">Save</button>
+    </div>
+    <br>
+    <div class="loadSave">
+      <label class="label" for="saves">Load save:</label>
+      <select id="saves"></select>
+      <button id="load">Load</button>
+    </div>
+    <br>
+    <div class="misc">
+      <button id="reset">Reset Chart</button>
+      <button id="download">Download Image</button>
+    </div>
+  </fieldset>
+  <script src="bundle.js"></script>
+</body>
+
 </html>
